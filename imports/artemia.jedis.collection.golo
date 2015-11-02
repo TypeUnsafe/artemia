@@ -3,7 +3,7 @@ module artemia.redis
 import redis.clients.jedis.Jedis
 
 ----
-Old version of toMap
+Old versions of toMap
 function toMap = |instanceStructure| {
   let mp = map[]
   let itr = instanceStructure: iterator()
@@ -13,9 +13,13 @@ function toMap = |instanceStructure| {
   }
   return mp
 }
-----
+
 function toMap = |instanceStructure| -> 
   map[[fld: get(0), fld: get(1)] foreach fld in instanceStructure]
+----
+function toMap = |instanceStructure| -> 
+  map[[k, v] foreach k, v in instanceStructure]
+
 
 function fromMap = |instanceStructure, mapFields| {
   instanceStructure: members(): each(|fieldName| {

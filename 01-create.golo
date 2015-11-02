@@ -42,7 +42,7 @@ function main = |args| {
 			
 	let bob = human(id="bob_morane", firstName="Bob", lastName="Morane")
 	let john = human(id="john_doe", firstName="John", lastName="Doe")
-	let jane = human(id="jane_doe", firstName="Jane", lastName="Morane")
+	let jane = human(id="jane_doe", firstName="Jane", lastName="Doe")
 	
 	let wolf = animal("wolf", "Wolf", "dog")
 	let pinky = animal("pinky", "Pinky", "pig")
